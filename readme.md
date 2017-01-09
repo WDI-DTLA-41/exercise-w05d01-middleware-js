@@ -24,7 +24,7 @@ When a user clicks "#greeting"
 When a user visits '/', fills out the GET request form and clicks submit
 - render a string of HTML that says "You entered:" and the value from `<input type="text" name="key">`
 
-# BodyPaser
+# BodyParser
 
 "Parse incoming request bodies in a middleware before your handlers, available under the req.body property."
 
