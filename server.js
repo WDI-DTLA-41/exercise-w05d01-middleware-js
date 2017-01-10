@@ -54,13 +54,21 @@ app.get('/search', function(req, res) {
   }
 });
 
-var messages;
+var messages = [];
 app.post('/messages', function(req, res) {
-  messages = req.body.username;
+  var message = {};
+  message.user = req.body.username;
+  message.input = req.body.message;
+  messages.push(message);
   res.redirect('/messages');
 });
 app.get('/messages', function(req, res) {
-  res.send(messages);
+  var list = '<ul>';
+  messages.forEach(function(el) {
+    list += '<li>' + el.user + ': ' + el.input + '</li>';
+  });
+  list += '</ul>';
+  res.send(list);
 });
 
 var port = 3000;
