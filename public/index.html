@@ -2,21 +2,27 @@
 <html>
 <head>
   <title></title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1 id="greeting">Hello from Index.html</h1>
-
+<!-- request is in the head -->
   <p>GET request form</p>
   <form method="GET" action="/blah">
     <input type="text" name="key">
     <button>Submit</button>
   </form>
-
+<!-- req is in the body -->
   <p>POST request form</p>
   <form method="POST" action="/blah">
     <input type="text" name="key">
     <button>Submit</button>
   </form>
-
+<script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+  <script src="main.js"></script>
 </body>
 </html>
